@@ -1,0 +1,1330 @@
+<!doctype html>
+<html lang="id">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meridian Works - Solusi Website Profesional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;display=swap" rel="stylesheet">
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+      background-color: #0a0a0a;
+      color: #e0e0e0;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: #0a0a0a;
+    }
+    
+    .smooth-scroll {
+      scroll-behavior: smooth;
+    }
+    
+    .section-padding {
+      padding: 4rem 1.5rem;
+    }
+    
+    @media (min-width: 768px) {
+      .section-padding {
+        padding: 6rem 2rem;
+      }
+    }
+    
+    .fade-in {
+      animation: fadeIn 0.6s ease-in;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes blob {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(30px, -50px) scale(1.1); }
+      66% { transform: translate(-20px, 20px) scale(0.9); }
+    }
+    
+    .animate-blob {
+      animation: blob 7s infinite;
+    }
+    
+    .animation-delay-2000 {
+      animation-delay: 2s;
+    }
+    
+    .animation-delay-4000 {
+      animation-delay: 4s;
+    }
+    
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .value-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .value-card:hover {
+      transform: translateY(-8px);
+    }
+    
+    .icon-container {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin: 0 auto 1.5rem;
+    }
+    
+    @keyframes neonPulse {
+      0%, 100% {
+        text-shadow: 
+          0 0 8px #a855f7,
+          0 0 12px #a855f7;
+      }
+      50% {
+        text-shadow: 
+          0 0 12px #a855f7,
+          0 0 18px #ec4899;
+      }
+    }
+    
+    .neon-text {
+      color: #a855f7;
+      animation: neonPulse 3s ease-in-out infinite;
+      font-weight: 900;
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="smooth-scroll"><!-- Navigation -->
+  <nav id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"><button id="logo" class="text-2xl font-bold tracking-tight cursor-pointer flex items-center gap-3"> <img src="logo59.png" alt="Meridian Works Logo" class="w-10 h-10 object-contain" id="logo-img" onerror="this.style.display='none';"> <span style="font-family: 'Montserrat', sans-serif; font-weight: 800;">MERIDIAN WORKS</span> </button>
+    <div class="hidden md:flex items-center gap-8"><button class="nav-link font-medium" id="nav-services">Layanan</button> <button class="nav-link font-medium" id="nav-about">Tentang</button> <button class="nav-link font-medium" id="nav-contact">Kontak</button>
+     <div class="flex items-center gap-2"><button id="lang-id" class="px-3 py-1 rounded font-medium transition-all">ID</button> <span>|</span> <button id="lang-en" class="px-3 py-1 rounded font-medium transition-all">EN</button>
+     </div>
+    </div><button id="mobile-menu-btn" class="md:hidden p-2">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+     </svg></button>
+   </div>
+   <div id="mobile-menu" class="hidden md:hidden px-6 py-4 border-t"><button class="block py-2 font-medium w-full text-left" id="mobile-nav-services">Layanan</button> <button class="block py-2 font-medium w-full text-left" id="mobile-nav-about">Tentang</button> <button class="block py-2 font-medium w-full text-left" id="mobile-nav-contact">Kontak</button>
+    <div class="flex items-center gap-2 mt-4"><button id="mobile-lang-id" class="px-3 py-1 rounded font-medium">ID</button> <span>|</span> <button id="mobile-lang-en" class="px-3 py-1 rounded font-medium">EN</button>
+    </div>
+   </div>
+  </nav><!-- Main Container -->
+  <div id="main-content"><!-- Hero Section -->
+   <section id="hero" class="min-h-full flex items-center justify-center section-padding relative overflow-hidden" style="padding-top: 8rem; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); color: #e0e0e0;">
+    <div class="fixed inset-0 opacity-30 pointer-events-none" style="z-index: 0;">
+     <div class="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+     <div class="absolute top-40 right-10 w-72 h-72 bg-violet-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+     <div class="absolute -bottom-8 left-1/2 w-72 h-72 bg-fuchsia-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+    </div>
+    <div class="max-w-4xl mx-auto text-center fade-in relative z-10">
+     <h1 id="hero-title" class="text-5xl md:text-6xl font-bold mb-6 leading-tight"><span id="hero-line1">Masa depan bisnis Anda</span><br><span id="hero-line2">bisa </span><span id="neon-word" class="neon-text">cerah</span><span id="hero-exclamation">!</span></h1>
+     <p id="hero-subtitle" class="text-xl md:text-2xl mb-8 leading-relaxed max-w-3xl mx-auto">Solusi website profesional yang membawa bisnis Anda ke level berikutnya. Kami menciptakan website yang menarik, responsif, dan menghasilkan konversi.</p><a href="https://form.typeform.com/to/tRaQliOT" target="_blank" rel="noopener noreferrer" id="cta-button" class="inline-block px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 shadow-lg"> Dapatkan Penawaran Gratis </a>
+    </div>
+   </section><!-- Why Choose Us Section -->
+   <section class="section-padding relative" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); color: #e0e0e0;">
+    <div class="max-w-4xl mx-auto relative z-10">
+     <h2 id="why-choose-title" class="text-4xl md:text-5xl font-bold text-center mb-12">Mengapa Memilih Kami?</h2>
+     <div class="space-y-6 text-lg leading-relaxed">
+      <p id="why-choose-p1">Tim kami yang berdedikasi berkomitmen untuk menciptakan solusi digital yang tidak hanya memenuhi, tetapi melampaui ekspektasi Anda. Dengan pendekatan yang berfokus pada klien, kami memastikan setiap proyek mendapat perhatian penuh.</p>
+      <p id="why-choose-p2">Pengalaman bertahun-tahun dalam industri web development memungkinkan kami bekerja dengan efisien dan efektif. Kami memahami deadline yang ketat dan memberikan hasil berkualitas tinggi tepat waktu.</p>
+      <p id="why-choose-p3">Setiap detail penting bagi kami. Dari desain visual yang memukau hingga fungsionalitas yang sempurna, kami memastikan website Anda tidak hanya terlihat bagus, tetapi juga bekerja dengan optimal di semua perangkat.</p>
+      <p id="why-choose-p4">Tujuan utama kami adalah membantu bisnis Anda berkembang. Kami menciptakan website yang tidak hanya indah dipandang, tetapi juga menghasilkan konversi dan ROI yang nyata untuk investasi Anda.</p>
+     </div>
+    </div>
+   </section><!-- Process Section -->
+   <section class="section-padding relative" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); color: #e0e0e0;">
+    <div class="absolute inset-0 opacity-5" style="background-image: linear-gradient(rgba(168, 85, 247, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(168, 85, 247, 0.5) 1px, transparent 1px); background-size: 50px 50px;"></div>
+    <div class="max-w-6xl mx-auto relative z-10">
+     <h2 id="process-title" class="text-4xl md:text-5xl font-bold text-center mb-16">Proses Sederhana &amp; Cepat</h2>
+     <div class="grid md:grid-cols-3 gap-8"><!-- Step 1 -->
+      <div class="text-center">
+       <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6" id="step1-circle">
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+       </div>
+       <h3 id="step1-title" class="text-2xl font-bold mb-4">Formulir Cepat</h3>
+       <p id="step1-desc" class="leading-relaxed">Isi formulir devis cepat dengan kebutuhan Anda. Proses sederhana yang hanya membutuhkan beberapa menit.</p>
+      </div><!-- Step 2 -->
+      <div class="text-center">
+       <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6" id="step2-circle">
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+        </svg>
+       </div>
+       <h3 id="step2-title" class="text-2xl font-bold mb-4">Proposal dalam 24 Jam</h3>
+       <p id="step2-desc" class="leading-relaxed">Tim kami menganalisis kebutuhan Anda dan mengirim proposal kustom dengan rencana dan harga dalam 24 jam.</p>
+      </div><!-- Step 3 -->
+      <div class="text-center">
+       <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6" id="step3-circle">
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+        </svg>
+       </div>
+       <h3 id="step3-title" class="text-2xl font-bold mb-4">Bangun Website Impian</h3>
+       <p id="step3-desc" class="leading-relaxed">Kami mulai membangun website impian Anda dengan transparansi penuh dan komunikasi berkelanjutan.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Final CTA Section -->
+   <section class="section-padding text-center" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); color: #e0e0e0;">
+    <div class="max-w-3xl mx-auto">
+     <h2 id="final-cta-title" class="text-4xl md:text-5xl font-bold mb-6">Siap Memulai?</h2>
+     <p id="final-cta-subtitle" class="text-xl mb-8 leading-relaxed">Jawab beberapa pertanyaan sederhana untuk mendapatkan proposal website kustom Anda hari ini.</p><a href="https://form.typeform.com/to/tRaQliOT" target="_blank" rel="noopener noreferrer" id="final-cta-button" class="inline-block px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 shadow-lg"> Dapatkan Penawaran Gratis </a>
+    </div>
+   </section><!-- Footer -->
+   <footer id="footer" class="py-8 text-center" style="background-color: #1a1a2e; color: #e0e0e0; border-top: 1px solid #2a2a3e;">
+    <p id="footer-text" class="text-sm" style="color: #e0e0e0; opacity: 0.7;">2025 Meridian Works. Semua hak dilindungi.</p>
+   </footer>
+  </div><!-- Services Page -->
+  <div id="services-page" class="hidden" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);">
+   <section class="min-h-full section-padding relative overflow-hidden" style="padding-top: 8rem; color: #e0e0e0;">
+    <div class="fixed inset-0 opacity-30 pointer-events-none" style="z-index: 0;">
+     <div class="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+     <div class="absolute top-40 right-10 w-72 h-72 bg-violet-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+     <div class="absolute -bottom-8 left-1/2 w-72 h-72 bg-fuchsia-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+    </div>
+    <div class="max-w-6xl mx-auto relative z-10">
+     <h2 id="services-page-title" class="text-4xl md:text-5xl font-bold text-center mb-6">Layanan Kami</h2>
+     <p id="services-page-desc" class="text-xl text-center mb-16 leading-relaxed max-w-3xl mx-auto">Kami menciptakan website kustom yang disesuaikan dengan kebutuhan bisnis Anda, baik itu platform e-commerce yang powerful maupun situs korporat yang profesional.</p>
+     <div class="grid md:grid-cols-3 gap-8"><!-- Service 1 -->
+      <div class="value-card p-8 rounded-xl">
+       <div id="service-icon-1" class="icon-container">
+        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        </svg>
+       </div>
+       <h3 id="service-1-title" class="text-2xl font-bold mb-4 text-center">E-Commerce</h3>
+       <p id="service-1-desc" class="text-center leading-relaxed">Platform penjualan online lengkap dengan keranjang belanja, payment gateway, dan manajemen produk yang mudah.</p>
+      </div><!-- Service 2 -->
+      <div class="value-card p-8 rounded-xl">
+       <div id="service-icon-2" class="icon-container">
+        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+       </div>
+       <h3 id="service-2-title" class="text-2xl font-bold mb-4 text-center">Website Korporat</h3>
+       <p id="service-2-desc" class="text-center leading-relaxed">Situs korporat profesional dengan CMS untuk kemudahan update konten, blog, dan manajemen tim.</p>
+      </div><!-- Service 3 -->
+      <div class="value-card p-8 rounded-xl">
+       <div id="service-icon-3" class="icon-container">
+        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+       </div>
+       <h3 id="service-3-title" class="text-2xl font-bold mb-4 text-center">Portfolio Bisnis</h3>
+       <p id="service-3-desc" class="text-center leading-relaxed">Showcase karya dan layanan Anda dengan portfolio yang menawan dan interaktif untuk menarik klien.</p>
+      </div><!-- Service 4 -->
+      <div class="value-card p-8 rounded-xl">
+       <div id="service-icon-4" class="icon-container">
+        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+       </div>
+       <h3 id="service-4-title" class="text-2xl font-bold mb-4 text-center">Website Jasa</h3>
+       <p id="service-4-desc" class="text-center leading-relaxed">Website untuk bisnis jasa dengan sistem booking, formulir kontak, dan informasi layanan lengkap.</p>
+      </div><!-- Service 5 -->
+      <div class="value-card p-8 rounded-xl">
+       <div id="service-icon-5" class="icon-container">
+        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+       </div>
+       <h3 id="service-5-title" class="text-2xl font-bold mb-4 text-center">Landing Page</h3>
+       <p id="service-5-desc" class="text-center leading-relaxed">Halaman konversi tinggi untuk kampanye marketing, peluncuran produk, atau lead generation.</p>
+      </div><!-- Service 6 -->
+      <div class="value-card p-8 rounded-xl">
+       <div id="service-icon-6" class="icon-container">
+        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+        </svg>
+       </div>
+       <h3 id="service-6-title" class="text-2xl font-bold mb-4 text-center">Solusi Kustom</h3>
+       <p id="service-6-desc" class="text-center leading-relaxed">Solusi kustom sesuai kebutuhan unik bisnis Anda dengan fitur dan fungsionalitas khusus.</p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <footer id="footer-services" class="py-8 text-center" style="background-color: #1a1a2e; color: #e0e0e0; border-top: 1px solid #2a2a3e;">
+    <p id="footer-text-services" class="text-sm" style="color: #e0e0e0; opacity: 0.7;">2025 Meridian Works. Semua hak dilindungi.</p>
+   </footer>
+  </div><!-- About Page -->
+  <div id="about-page" class="hidden" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);"><!-- Hero Section -->
+   <section class="section-padding relative overflow-hidden" style="padding-top: 8rem; color: #e0e0e0;">
+    <div class="fixed inset-0 opacity-30 pointer-events-none" style="z-index: 0;">
+     <div class="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+     <div class="absolute top-40 right-10 w-72 h-72 bg-violet-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+     <div class="absolute -bottom-8 left-1/2 w-72 h-72 bg-fuchsia-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+    </div>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+     <h1 id="about-hero-title" class="text-5xl md:text-6xl font-bold mb-6">Our Story</h1>
+     <h2 id="about-hero-subtitle" class="text-2xl md:text-3xl font-light opacity-90">From Europe to Asia: A journey of digital innovation</h2>
+    </div>
+   </section><!-- Timeline Section -->
+   <section class="section-padding relative" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); color: #e0e0e0;">
+    <div class="max-w-4xl mx-auto relative z-10">
+     <div class="relative"><!-- Vertical Line -->
+      <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5" id="timeline-line" style="transform: translateX(-50%);"></div><!-- Timeline Point 1 -->
+      <div class="relative mb-16 md:mb-20">
+       <div class="flex flex-col md:flex-row items-start md:items-center">
+        <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
+         <div class="ml-16 md:ml-0">
+          <h3 id="timeline-1-date" class="text-3xl font-bold mb-4">2014 - Founded in Europe</h3>
+          <p id="timeline-1-text" class="text-lg leading-relaxed opacity-90">Meridian Works was born with a simple mission: to empower businesses through exceptional web design and development. What started as a small team in Europe grew into a trusted partner for companies looking to establish their digital presence.</p>
+         </div>
+        </div>
+        <div class="absolute left-8 md:left-1/2 w-12 h-12 rounded-full border-4 flex items-center justify-center" id="timeline-dot-1" style="transform: translate(-50%, 0);">
+         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+         </svg>
+        </div>
+        <div class="md:w-1/2 md:pl-12"></div>
+       </div>
+      </div><!-- Timeline Point 2 -->
+      <div class="relative mb-16 md:mb-20">
+       <div class="flex flex-col md:flex-row items-start md:items-center">
+        <div class="md:w-1/2 md:pr-12"></div>
+        <div class="absolute left-8 md:left-1/2 w-12 h-12 rounded-full border-4 flex items-center justify-center" id="timeline-dot-2" style="transform: translate(-50%, 0);">
+         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+         </svg>
+        </div>
+        <div class="md:w-1/2 md:pl-12">
+         <div class="ml-16 md:ml-0">
+          <h3 id="timeline-2-date" class="text-3xl font-bold mb-4">2019 - Discovering a Digital Gap</h3>
+          <p id="timeline-2-text" class="text-lg leading-relaxed opacity-90">After years of success in Europe, our team noticed a critical pattern: many promising businesses in Southeast Asia and Oceania lacked a strong digital presence. Despite having excellent products and services, they struggled to reach customers online. This observation sparked a crucial question: How could we help?</p>
+         </div>
+        </div>
+       </div>
+      </div><!-- Timeline Point 3 -->
+      <div class="relative mb-16 md:mb-20">
+       <div class="flex flex-col md:flex-row items-start md:items-center">
+        <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
+         <div class="ml-16 md:ml-0">
+          <h3 id="timeline-3-date" class="text-3xl font-bold mb-4">2020-2024 - Expansion to Asia-Pacific</h3>
+          <p id="timeline-3-text" class="text-lg leading-relaxed opacity-90">We made the bold decision to expand to Southeast Asia and Oceania. What we found was remarkable: businesses hungry for growth, ready to embrace digital transformation, but lacking access to quality web development services. We opened offices, built local partnerships, and began our mission to bridge the digital divide.</p>
+         </div>
+        </div>
+        <div class="absolute left-8 md:left-1/2 w-12 h-12 rounded-full border-4 flex items-center justify-center" id="timeline-dot-3" style="transform: translate(-50%, 0);">
+         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+         </svg>
+        </div>
+        <div class="md:w-1/2 md:pl-12"></div>
+       </div>
+      </div><!-- Timeline Point 4 -->
+      <div class="relative mb-16 md:mb-20">
+       <div class="flex flex-col md:flex-row items-start md:items-center">
+        <div class="md:w-1/2 md:pr-12"></div>
+        <div class="absolute left-8 md:left-1/2 w-12 h-12 rounded-full border-4 flex items-center justify-center" id="timeline-dot-4" style="transform: translate(-50%, 0);">
+         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+         </svg>
+        </div>
+        <div class="md:w-1/2 md:pl-12">
+         <div class="ml-16 md:ml-0">
+          <h3 id="timeline-4-date" class="text-3xl font-bold mb-4">Today - Your Digital Partner</h3>
+          <p id="timeline-4-text" class="text-lg leading-relaxed opacity-90">Today, Meridian Works operates as a trusted web development agency across Europe, Asia, and Oceania. We've helped hundreds of businesses of all sizes launch successful online platforms. From startups to established companies, our mission remains unchanged: create beautiful, functional websites that drive real business growth.</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Core Values Section -->
+   <section class="section-padding relative" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); color: #e0e0e0;">
+    <div class="max-w-6xl mx-auto relative z-10">
+     <h2 id="values-title" class="text-4xl md:text-5xl font-bold text-center mb-16">Our Core Values</h2>
+     <div class="grid md:grid-cols-3 gap-8"><!-- Value 1 -->
+      <div class="value-card p-8 rounded-xl text-center">
+       <div class="w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center" id="value-icon-1">
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
+       </div>
+       <h3 id="value-1-title" class="text-2xl font-bold mb-4">Innovation</h3>
+       <p id="value-1-desc" class="leading-relaxed opacity-90">We stay ahead of technology trends to deliver cutting-edge solutions.</p>
+      </div><!-- Value 2 -->
+      <div class="value-card p-8 rounded-xl text-center">
+       <div class="w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center" id="value-icon-2">
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+       </div>
+       <h3 id="value-2-title" class="text-2xl font-bold mb-4">Accessibility</h3>
+       <p id="value-2-desc" class="leading-relaxed opacity-90">Quality web development should be available to businesses everywhere, not just major cities.</p>
+      </div><!-- Value 3 -->
+      <div class="value-card p-8 rounded-xl text-center">
+       <div class="w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center" id="value-icon-3">
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+        </svg>
+       </div>
+       <h3 id="value-3-title" class="text-2xl font-bold mb-4">Excellence</h3>
+       <p id="value-3-desc" class="leading-relaxed opacity-90">We never compromise on quality, regardless of project size or budget.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Why Choose Us Section -->
+   <section class="section-padding relative" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); color: #e0e0e0;">
+    <div class="max-w-4xl mx-auto relative z-10">
+     <h2 id="why-us-title" class="text-4xl md:text-5xl font-bold text-center mb-16">Why Choose Meridian Works?</h2>
+     <div class="space-y-6"><!-- Reason 1 -->
+      <div class="flex items-start gap-4">
+       <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1" id="check-icon-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+        </svg>
+       </div>
+       <p id="reason-1" class="text-lg leading-relaxed opacity-90">10+ years of combined experience across multiple continents</p>
+      </div><!-- Reason 2 -->
+      <div class="flex items-start gap-4">
+       <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1" id="check-icon-2">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+        </svg>
+       </div>
+       <p id="reason-2" class="text-lg leading-relaxed opacity-90">Fast 24-hour response times on all inquiries</p>
+      </div><!-- Reason 3 -->
+      <div class="flex items-start gap-4">
+       <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1" id="check-icon-3">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+        </svg>
+       </div>
+       <p id="reason-3" class="text-lg leading-relaxed opacity-90">Proven track record helping businesses achieve their goals</p>
+      </div><!-- Reason 4 -->
+      <div class="flex items-start gap-4">
+       <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1" id="check-icon-4">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+        </svg>
+       </div>
+       <p id="reason-4" class="text-lg leading-relaxed opacity-90">Understanding of local and global market dynamics</p>
+      </div><!-- Reason 5 -->
+      <div class="flex items-start gap-4">
+       <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1" id="check-icon-5">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+        </svg>
+       </div>
+       <p id="reason-5" class="text-lg leading-relaxed opacity-90">Dedicated support throughout your entire project</p>
+      </div><!-- Reason 6 -->
+      <div class="flex items-start gap-4">
+       <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1" id="check-icon-6">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+        </svg>
+       </div>
+       <p id="reason-6" class="text-lg leading-relaxed opacity-90">Competitive pricing with premium quality</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- CTA Section -->
+   <section class="section-padding text-center relative" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); color: #e0e0e0;">
+    <div class="max-w-3xl mx-auto relative z-10">
+     <h2 id="about-cta-title" class="text-4xl md:text-5xl font-bold mb-8">Ready to be part of our story?</h2><a href="https://form.typeform.com/to/tRaQliOT" target="_blank" rel="noopener noreferrer" id="about-cta-button" class="inline-block px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 shadow-lg"> Start Your Digital Journey </a>
+    </div>
+   </section>
+   <footer id="footer-about" class="py-8 text-center" style="background-color: #1a1a2e; color: #e0e0e0; border-top: 1px solid #2a2a3e;">
+    <p id="footer-text-about" class="text-sm" style="color: #e0e0e0; opacity: 0.7;">2025 Meridian Works. All rights reserved.</p>
+   </footer>
+  </div><!-- Contact Page -->
+  <div id="contact-page" class="hidden" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);">
+   <section class="section-padding relative overflow-hidden" style="padding-top: 8rem; min-height: calc(100% - 80px); color: #e0e0e0;">
+    <div class="fixed inset-0 opacity-30 pointer-events-none" style="z-index: 0;">
+     <div class="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+     <div class="absolute top-40 right-10 w-72 h-72 bg-violet-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+     <div class="absolute -bottom-8 left-1/2 w-72 h-72 bg-fuchsia-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+    </div>
+    <div class="max-w-4xl mx-auto relative z-10"><!-- Header avec icône -->
+     <div class="text-center mb-12">
+      <div class="w-24 h-24 rounded-full mx-auto mb-6 flex items-center justify-center" id="contact-header-icon">
+       <svg class="w-12 h-12" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+       </svg>
+      </div>
+      <h2 id="contact-title" class="text-4xl md:text-5xl font-bold mb-6">Hubungi Kami</h2>
+      <p id="contact-subtitle" class="text-xl mb-12 opacity-90">Siap memulai proyek Anda? Pilih cara terbaik untuk berkomunikasi dengan kami.</p>
+     </div><!-- Contact Options -->
+     <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto"><!-- WhatsApp --> <a href="https://wa.me/message/AKII47SPLLJ3O1" target="_blank" rel="noopener noreferrer" id="whatsapp-btn" class="flex flex-col items-center justify-center gap-4 p-8 rounded-xl text-center transition-all transform hover:scale-105 shadow-lg">
+       <div class="w-16 h-16 rounded-full flex items-center justify-center" id="whatsapp-icon-container">
+        <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+       </div><span id="whatsapp-text" class="text-xl font-bold">WhatsApp Business</span> </a> <!-- Email --> <a href="mailto:contact@worksmerdian.eu" id="email-btn" class="flex flex-col items-center justify-center gap-4 p-8 rounded-xl text-center transition-all transform hover:scale-105 shadow-lg">
+       <div class="w-16 h-16 rounded-full flex items-center justify-center" id="email-icon-container">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+       </div><span id="email-text" class="text-xl font-bold">Email</span> </a>
+     </div>
+    </div>
+   </section>
+   <footer id="footer-contact" class="py-8 text-center" style="background-color: #1a1a2e; color: #e0e0e0; border-top: 1px solid #2a2a3e;">
+    <p id="footer-text-contact" class="text-sm" style="color: #e0e0e0; opacity: 0.7;">2025 Meridian Works. Semua hak dilindungi.</p>
+   </footer>
+  </div>
+  <script>
+    let currentPage = 'main';
+
+    function showPage(page) {
+      currentPage = page;
+      document.getElementById('main-content').classList.add('hidden');
+      document.getElementById('services-page').classList.add('hidden');
+      document.getElementById('about-page').classList.add('hidden');
+      document.getElementById('contact-page').classList.add('hidden');
+      
+      if (page === 'main') {
+        document.getElementById('main-content').classList.remove('hidden');
+      } else if (page === 'services') {
+        document.getElementById('services-page').classList.remove('hidden');
+      } else if (page === 'about') {
+        document.getElementById('about-page').classList.remove('hidden');
+      } else if (page === 'contact') {
+        document.getElementById('contact-page').classList.remove('hidden');
+      }
+      
+      window.scrollTo(0, 0);
+    }
+
+    const defaultConfig = {
+      background_color: '#0a0a0a',
+      surface_color: '#1a1a2e',
+      text_color: '#e0e0e0',
+      primary_action_color: '#a855f7',
+      secondary_action_color: '#c084fc',
+      font_family: 'Inter',
+      font_size: 16,
+      hero_title: 'Masa depan bisnis Anda bisa cerah!',
+      hero_subtitle: 'Solusi website profesional yang membawa bisnis Anda ke level berikutnya. Kami menciptakan website yang menarik, responsif, dan menghasilkan konversi.',
+      cta_button: 'Dapatkan Penawaran Gratis',
+      about_title: 'Mengapa Memilih Kami?',
+      footer_text: '2025 Meridian Works. Semua hak dilindungi.'
+    };
+
+    let currentLang = 'id';
+
+    const translations = {
+      id: {
+        nav_services: 'Layanan',
+        nav_about: 'Tentang',
+        nav_contact: 'Kontak',
+        hero_line1: 'Masa depan bisnis Anda',
+        hero_line2: 'bisa ',
+        neon_word: 'cerah',
+        hero_exclamation: '!',
+        hero_subtitle: 'Solusi website profesional yang membawa bisnis Anda ke level berikutnya. Kami menciptakan website yang menarik, responsif, dan menghasilkan konversi.',
+        cta_button: 'Dapatkan Penawaran Gratis',
+        services_page_title: 'Layanan Kami',
+        services_page_desc: 'Kami menciptakan website kustom yang disesuaikan dengan kebutuhan bisnis Anda, baik itu platform e-commerce yang powerful maupun situs korporat yang profesional.',
+        services_cta_title: 'Siap memulai proyek Anda?',
+        services_cta_button: 'Dapatkan Penawaran Gratis',
+        service_1_title: 'E-Commerce',
+        service_1_desc: 'Platform penjualan online lengkap dengan keranjang belanja, payment gateway, dan manajemen produk yang mudah.',
+        service_2_title: 'Website Korporat',
+        service_2_desc: 'Situs korporat profesional dengan CMS untuk kemudahan update konten, blog, dan manajemen tim.',
+        service_3_title: 'Portfolio Bisnis',
+        service_3_desc: 'Showcase karya dan layanan Anda dengan portfolio yang menawan dan interaktif untuk menarik klien.',
+        service_4_title: 'Website Jasa',
+        service_4_desc: 'Website untuk bisnis jasa dengan sistem booking, formulir kontak, dan informasi layanan lengkap.',
+        service_5_title: 'Landing Page',
+        service_5_desc: 'Halaman konversi tinggi untuk kampanye marketing, peluncuran produk, atau lead generation.',
+        service_6_title: 'Solusi Kustom',
+        service_6_desc: 'Solusi kustom sesuai kebutuhan unik bisnis Anda dengan fitur dan fungsionalitas khusus.',
+        why_choose_title: 'Mengapa Memilih Kami?',
+        why_choose_p1: 'Tim kami yang berdedikasi berkomitmen untuk menciptakan solusi digital yang tidak hanya memenuhi, tetapi melampaui ekspektasi Anda. Dengan pendekatan yang berfokus pada klien, kami memastikan setiap proyek mendapat perhatian penuh.',
+        why_choose_p2: 'Pengalaman bertahun-tahun dalam industri web development memungkinkan kami bekerja dengan efisien dan efektif. Kami memahami deadline yang ketat dan memberikan hasil berkualitas tinggi tepat waktu.',
+        why_choose_p3: 'Setiap detail penting bagi kami. Dari desain visual yang memukau hingga fungsionalitas yang sempurna, kami memastikan website Anda tidak hanya terlihat bagus, tetapi juga bekerja dengan optimal di semua perangkat.',
+        why_choose_p4: 'Tujuan utama kami adalah membantu bisnis Anda berkembang. Kami menciptakan website yang tidak hanya indah dipandang, tetapi juga menghasilkan konversi dan ROI yang nyata untuk investasi Anda.',
+        process_title: 'Proses Sederhana & Cepat',
+        step1_title: 'Formulir Cepat',
+        step1_desc: 'Isi formulir devis cepat dengan kebutuhan Anda. Proses sederhana yang hanya membutuhkan beberapa menit.',
+        step2_title: 'Proposal dalam 24 Jam',
+        step2_desc: 'Tim kami menganalisis kebutuhan Anda dan mengirim proposal kustom dengan rencana dan harga dalam 24 jam.',
+        step3_title: 'Bangun Website Impian',
+        step3_desc: 'Kami mulai membangun website impian Anda dengan transparansi penuh dan komunikasi berkelanjutan.',
+        final_cta_title: 'Siap Memulai?',
+        final_cta_subtitle: 'Jawab beberapa pertanyaan sederhana untuk mendapatkan proposal website kustom Anda hari ini.',
+        final_cta_button: 'Dapatkan Penawaran Gratis',
+        about_title: 'Mengapa Memilih Kami?',
+        about_p1: 'Tim kami yang berdedikasi berkomitmen untuk menciptakan solusi digital yang tidak hanya memenuhi, tetapi melampaui ekspektasi Anda. Dengan pendekatan yang berfokus pada klien, kami memastikan setiap proyek mendapat perhatian penuh.',
+        about_p2: 'Pengalaman bertahun-tahun dalam industri web development memungkinkan kami bekerja dengan efisien dan efektif. Kami memahami deadline yang ketat dan memberikan hasil berkualitas tinggi tepat waktu.',
+        about_p3: 'Setiap detail penting bagi kami. Dari desain visual yang memukau hingga fungsionalitas yang sempurna, kami memastikan website Anda tidak hanya terlihat bagus, tetapi juga bekerja dengan optimal di semua perangkat.',
+        about_p4: 'Tujuan utama kami adalah membantu bisnis Anda berkembang. Kami menciptakan website yang tidak hanya indah dipandang, tetapi juga menghasilkan konversi dan ROI yang nyata untuk investasi Anda.',
+        about_conclusion: 'Mari bekerja sama untuk mewujudkan visi digital Anda dengan harga yang kompetitif dan hasil yang luar biasa!',
+        about_hero_title: 'Kisah Kami',
+        about_hero_subtitle: 'Dari Eropa ke Asia: Perjalanan inovasi digital',
+        timeline_1_date: '2014 - Didirikan di Eropa',
+        timeline_1_text: 'Meridian Works lahir dengan misi sederhana: memberdayakan bisnis melalui desain dan pengembangan web yang luar biasa. Yang dimulai sebagai tim kecil di Eropa berkembang menjadi mitra terpercaya bagi perusahaan yang ingin membangun kehadiran digital mereka.',
+        timeline_2_date: '2019 - Menemukan Kesenjangan Digital',
+        timeline_2_text: 'Setelah bertahun-tahun sukses di Eropa, tim kami menemukan pola kritis: banyak bisnis menjanjikan di Asia Tenggara dan Oseania kekurangan kehadiran digital yang kuat. Meskipun memiliki produk dan layanan yang sangat baik, mereka kesulitan menjangkau pelanggan online. Pengamatan ini memicu pertanyaan penting: Bagaimana kami bisa membantu?',
+        timeline_3_date: '2020-2024 - Ekspansi ke Asia-Pasifik',
+        timeline_3_text: 'Kami membuat keputusan berani untuk berkembang ke Asia Tenggara dan Oseania. Yang kami temukan luar biasa: bisnis yang lapar akan pertumbuhan, siap untuk merangkul transformasi digital, tetapi kekurangan akses ke layanan pengembangan web berkualitas. Kami membuka kantor, membangun kemitraan lokal, dan memulai misi kami untuk menjembatani kesenjangan digital.',
+        timeline_4_date: 'Hari Ini - Mitra Digital Anda',
+        timeline_4_text: 'Hari ini, Meridian Works beroperasi sebagai agensi pengembangan web terpercaya di Eropa, Asia, dan Oseania. Kami telah membantu ratusan bisnis dari berbagai ukuran meluncurkan platform online yang sukses. Dari startup hingga perusahaan mapan, misi kami tetap tidak berubah: menciptakan website yang indah dan fungsional yang mendorong pertumbuhan bisnis nyata.',
+        values_title: 'Nilai Inti Kami',
+        value_1_title: 'Inovasi',
+        value_1_desc: 'Kami selalu mengikuti tren teknologi untuk memberikan solusi terdepan.',
+        value_2_title: 'Aksesibilitas',
+        value_2_desc: 'Pengembangan web berkualitas harus tersedia untuk bisnis di mana saja, bukan hanya kota besar.',
+        value_3_title: 'Keunggulan',
+        value_3_desc: 'Kami tidak pernah berkompromi pada kualitas, terlepas dari ukuran proyek atau anggaran.',
+        why_us_title: 'Mengapa Memilih Meridian Works?',
+        reason_1: '10+ tahun pengalaman gabungan di berbagai benua',
+        reason_2: 'Waktu respons cepat 24 jam untuk semua pertanyaan',
+        reason_3: 'Rekam jejak terbukti membantu bisnis mencapai tujuan mereka',
+        reason_4: 'Pemahaman dinamika pasar lokal dan global',
+        reason_5: 'Dukungan khusus sepanjang proyek Anda',
+        reason_6: 'Harga kompetitif dengan kualitas premium',
+        about_cta_title: 'Siap menjadi bagian dari kisah kami?',
+        about_cta_button: 'Mulai Perjalanan Digital Anda',
+        contact_title: 'Hubungi Kami',
+        contact_subtitle: 'Siap memulai proyek Anda? Pilih cara terbaik untuk berkomunikasi dengan kami.',
+        whatsapp_text: 'WhatsApp Business',
+        email_text: 'Email',
+        footer_text: '2025 Meridian Works. Semua hak dilindungi.'
+      },
+      en: {
+        nav_services: 'Services',
+        nav_about: 'About',
+        nav_contact: 'Contact',
+        hero_line1: 'Your business future',
+        hero_line2: 'can be ',
+        neon_word: 'bright',
+        hero_exclamation: '!',
+        hero_subtitle: 'Professional website solutions that take your business to the next level. We create attractive, responsive websites that generate conversions.',
+        cta_button: 'Get Free Quote',
+        services_page_title: 'Our Services',
+        services_page_desc: 'We create custom websites tailored to your business needs, whether it\'s a powerful e-commerce platform or a professional corporate site.',
+        service_1_title: 'E-Commerce',
+        service_1_desc: 'Complete online sales platform with shopping cart, payment gateway, and easy product management.',
+        service_2_title: 'Corporate Website',
+        service_2_desc: 'Professional corporate site with CMS for easy content updates, blog, and team management.',
+        service_3_title: 'Business Portfolio',
+        service_3_desc: 'Showcase your work and services with a stunning and interactive portfolio to attract clients.',
+        service_4_title: 'Service Website',
+        service_4_desc: 'Website for service businesses with booking system, contact forms, and complete service information.',
+        service_5_title: 'Landing Page',
+        service_5_desc: 'High-conversion pages for marketing campaigns, product launches, or lead generation.',
+        service_6_title: 'Custom Solution',
+        service_6_desc: 'Custom solutions tailored to your unique business needs with special features and functionality.',
+        why_choose_title: 'Why Choose Us?',
+        why_choose_p1: 'Our dedicated team is committed to creating digital solutions that not only meet but exceed your expectations. With a client-focused approach, we ensure every project receives full attention.',
+        why_choose_p2: 'Years of experience in the web development industry enable us to work efficiently and effectively. We understand tight deadlines and deliver high-quality results on time.',
+        why_choose_p3: 'Every detail matters to us. From stunning visual design to perfect functionality, we ensure your website not only looks great but also works optimally on all devices.',
+        why_choose_p4: 'Our main goal is to help your business grow. We create websites that are not only beautiful to look at, but also generate real conversions and ROI for your investment.',
+        process_title: 'Simple & Fast Process',
+        step1_title: 'Quick Form',
+        step1_desc: 'Fill out a quick quote form with your needs. A simple process that only takes a few minutes.',
+        step2_title: 'Proposal in 24 Hours',
+        step2_desc: 'Our team analyzes your needs and sends a custom proposal with a plan and pricing within 24 hours.',
+        step3_title: 'Build Dream Website',
+        step3_desc: 'We start building your dream website with full transparency and ongoing communication.',
+        final_cta_title: 'Ready to Get Started?',
+        final_cta_subtitle: 'Answer a few simple questions to get your custom website proposal today.',
+        final_cta_button: 'Get Your Free Quote',
+        about_title: 'Why Choose Us?',
+        about_p1: 'Our dedicated team is committed to creating digital solutions that not only meet but exceed your expectations. With a client-focused approach, we ensure every project receives full attention.',
+        about_p2: 'Years of experience in the web development industry enable us to work efficiently and effectively. We understand tight deadlines and deliver high-quality results on time.',
+        about_p3: 'Every detail matters to us. From stunning visual design to perfect functionality, we ensure your website not only looks great but also works optimally on all devices.',
+        about_p4: 'Our main goal is to help your business grow. We create websites that are not only beautiful to look at, but also generate real conversions and ROI for your investment.',
+        about_conclusion: 'Let\'s work together to realize your digital vision with competitive prices and outstanding results!',
+        about_hero_title: 'Our Story',
+        about_hero_subtitle: 'From Europe to Asia: A journey of digital innovation',
+        timeline_1_date: '2014 - Founded in Europe',
+        timeline_1_text: 'Meridian Works was born with a simple mission: to empower businesses through exceptional web design and development. What started as a small team in Europe grew into a trusted partner for companies looking to establish their digital presence.',
+        timeline_2_date: '2019 - Discovering a Digital Gap',
+        timeline_2_text: 'After years of success in Europe, our team noticed a critical pattern: many promising businesses in Southeast Asia and Oceania lacked a strong digital presence. Despite having excellent products and services, they struggled to reach customers online. This observation sparked a crucial question: How could we help?',
+        timeline_3_date: '2020-2024 - Expansion to Asia-Pacific',
+        timeline_3_text: 'We made the bold decision to expand to Southeast Asia and Oceania. What we found was remarkable: businesses hungry for growth, ready to embrace digital transformation, but lacking access to quality web development services. We opened offices, built local partnerships, and began our mission to bridge the digital divide.',
+        timeline_4_date: 'Today - Your Digital Partner',
+        timeline_4_text: 'Today, Meridian Works operates as a trusted web development agency across Europe, Asia, and Oceania. We\'ve helped hundreds of businesses of all sizes launch successful online platforms. From startups to established companies, our mission remains unchanged: create beautiful, functional websites that drive real business growth.',
+        values_title: 'Our Core Values',
+        value_1_title: 'Innovation',
+        value_1_desc: 'We stay ahead of technology trends to deliver cutting-edge solutions.',
+        value_2_title: 'Accessibility',
+        value_2_desc: 'Quality web development should be available to businesses everywhere, not just major cities.',
+        value_3_title: 'Excellence',
+        value_3_desc: 'We never compromise on quality, regardless of project size or budget.',
+        why_us_title: 'Why Choose Meridian Works?',
+        reason_1: '10+ years of combined experience across multiple continents',
+        reason_2: 'Fast 24-hour response times on all inquiries',
+        reason_3: 'Proven track record helping businesses achieve their goals',
+        reason_4: 'Understanding of local and global market dynamics',
+        reason_5: 'Dedicated support throughout your entire project',
+        reason_6: 'Competitive pricing with premium quality',
+        about_cta_title: 'Ready to be part of our story?',
+        about_cta_button: 'Start Your Digital Journey',
+        contact_title: 'Contact Us',
+        contact_subtitle: 'Ready to start your project? Choose the best way to communicate with us.',
+        whatsapp_text: 'WhatsApp Business',
+        email_text: 'Email',
+        footer_text: '2025 Meridian Works. All rights reserved.'
+      }
+    };
+
+    function switchLanguage(lang) {
+      currentLang = lang;
+      const t = translations[lang];
+      
+      // Force update About page if currently visible
+      if (currentPage === 'about') {
+        setTimeout(() => {
+          showPage('about');
+        }, 10);
+      }
+      
+      document.getElementById('nav-services').textContent = t.nav_services;
+      document.getElementById('nav-about').textContent = t.nav_about;
+      document.getElementById('nav-contact').textContent = t.nav_contact;
+      document.getElementById('mobile-nav-services').textContent = t.nav_services;
+      document.getElementById('mobile-nav-about').textContent = t.nav_about;
+      document.getElementById('mobile-nav-contact').textContent = t.nav_contact;
+      
+      document.getElementById('hero-line1').textContent = t.hero_line1;
+      document.getElementById('hero-line2').textContent = t.hero_line2;
+      document.getElementById('neon-word').textContent = t.neon_word;
+      document.getElementById('hero-exclamation').textContent = t.hero_exclamation;
+      document.getElementById('hero-subtitle').textContent = t.hero_subtitle;
+      document.getElementById('cta-button').textContent = t.cta_button;
+      
+      document.getElementById('services-page-title').textContent = t.services_page_title;
+      document.getElementById('services-page-desc').textContent = t.services_page_desc;
+      document.getElementById('service-1-title').textContent = t.service_1_title;
+      document.getElementById('service-1-desc').textContent = t.service_1_desc;
+      document.getElementById('service-2-title').textContent = t.service_2_title;
+      document.getElementById('service-2-desc').textContent = t.service_2_desc;
+      document.getElementById('service-3-title').textContent = t.service_3_title;
+      document.getElementById('service-3-desc').textContent = t.service_3_desc;
+      document.getElementById('service-4-title').textContent = t.service_4_title;
+      document.getElementById('service-4-desc').textContent = t.service_4_desc;
+      document.getElementById('service-5-title').textContent = t.service_5_title;
+      document.getElementById('service-5-desc').textContent = t.service_5_desc;
+      document.getElementById('service-6-title').textContent = t.service_6_title;
+      document.getElementById('service-6-desc').textContent = t.service_6_desc;
+      
+      document.getElementById('why-choose-title').textContent = t.why_choose_title;
+      document.getElementById('why-choose-p1').textContent = t.why_choose_p1;
+      document.getElementById('why-choose-p2').textContent = t.why_choose_p2;
+      document.getElementById('why-choose-p3').textContent = t.why_choose_p3;
+      document.getElementById('why-choose-p4').textContent = t.why_choose_p4;
+      
+      document.getElementById('process-title').textContent = t.process_title;
+      document.getElementById('step1-title').textContent = t.step1_title;
+      document.getElementById('step1-desc').textContent = t.step1_desc;
+      document.getElementById('step2-title').textContent = t.step2_title;
+      document.getElementById('step2-desc').textContent = t.step2_desc;
+      document.getElementById('step3-title').textContent = t.step3_title;
+      document.getElementById('step3-desc').textContent = t.step3_desc;
+      
+      document.getElementById('final-cta-title').textContent = t.final_cta_title;
+      document.getElementById('final-cta-subtitle').textContent = t.final_cta_subtitle;
+      document.getElementById('final-cta-button').textContent = t.final_cta_button;
+      
+      document.getElementById('about-title').textContent = t.about_title;
+      document.getElementById('about-p1').textContent = t.about_p1;
+      document.getElementById('about-p2').textContent = t.about_p2;
+      document.getElementById('about-p3').textContent = t.about_p3;
+      document.getElementById('about-p4').textContent = t.about_p4;
+      
+      if (currentPage === 'about') {
+        const aboutHeroTitle = document.getElementById('about-hero-title');
+        if (aboutHeroTitle) aboutHeroTitle.textContent = t.about_hero_title;
+        
+        const aboutHeroSubtitle = document.getElementById('about-hero-subtitle');
+        if (aboutHeroSubtitle) aboutHeroSubtitle.textContent = t.about_hero_subtitle;
+      }
+      
+      if (currentPage === 'about') {
+        const timeline1Date = document.getElementById('timeline-1-date');
+        if (timeline1Date) timeline1Date.textContent = t.timeline_1_date;
+        const timeline1Text = document.getElementById('timeline-1-text');
+        if (timeline1Text) timeline1Text.textContent = t.timeline_1_text;
+        
+        const timeline2Date = document.getElementById('timeline-2-date');
+        if (timeline2Date) timeline2Date.textContent = t.timeline_2_date;
+        const timeline2Text = document.getElementById('timeline-2-text');
+        if (timeline2Text) timeline2Text.textContent = t.timeline_2_text;
+        
+        const timeline3Date = document.getElementById('timeline-3-date');
+        if (timeline3Date) timeline3Date.textContent = t.timeline_3_date;
+        const timeline3Text = document.getElementById('timeline-3-text');
+        if (timeline3Text) timeline3Text.textContent = t.timeline_3_text;
+        
+        const timeline4Date = document.getElementById('timeline-4-date');
+        if (timeline4Date) timeline4Date.textContent = t.timeline_4_date;
+        const timeline4Text = document.getElementById('timeline-4-text');
+        if (timeline4Text) timeline4Text.textContent = t.timeline_4_text;
+        
+        const valuesTitle = document.getElementById('values-title');
+        if (valuesTitle) valuesTitle.textContent = t.values_title;
+        
+        const value1Title = document.getElementById('value-1-title');
+        if (value1Title) value1Title.textContent = t.value_1_title;
+        const value1Desc = document.getElementById('value-1-desc');
+        if (value1Desc) value1Desc.textContent = t.value_1_desc;
+        
+        const value2Title = document.getElementById('value-2-title');
+        if (value2Title) value2Title.textContent = t.value_2_title;
+        const value2Desc = document.getElementById('value-2-desc');
+        if (value2Desc) value2Desc.textContent = t.value_2_desc;
+        
+        const value3Title = document.getElementById('value-3-title');
+        if (value3Title) value3Title.textContent = t.value_3_title;
+        const value3Desc = document.getElementById('value-3-desc');
+        if (value3Desc) value3Desc.textContent = t.value_3_desc;
+        
+        const whyUsTitle = document.getElementById('why-us-title');
+        if (whyUsTitle) whyUsTitle.textContent = t.why_us_title;
+        
+        const reason1 = document.getElementById('reason-1');
+        if (reason1) reason1.textContent = t.reason_1;
+        const reason2 = document.getElementById('reason-2');
+        if (reason2) reason2.textContent = t.reason_2;
+        const reason3 = document.getElementById('reason-3');
+        if (reason3) reason3.textContent = t.reason_3;
+        const reason4 = document.getElementById('reason-4');
+        if (reason4) reason4.textContent = t.reason_4;
+        const reason5 = document.getElementById('reason-5');
+        if (reason5) reason5.textContent = t.reason_5;
+        const reason6 = document.getElementById('reason-6');
+        if (reason6) reason6.textContent = t.reason_6;
+        
+        const aboutCtaTitle = document.getElementById('about-cta-title');
+        if (aboutCtaTitle) aboutCtaTitle.textContent = t.about_cta_title;
+        const aboutCtaButton = document.getElementById('about-cta-button');
+        if (aboutCtaButton) aboutCtaButton.textContent = t.about_cta_button;
+      }
+      
+      document.getElementById('contact-title').textContent = t.contact_title;
+      document.getElementById('contact-subtitle').textContent = t.contact_subtitle;
+      document.getElementById('whatsapp-text').textContent = t.whatsapp_text;
+      document.getElementById('email-text').textContent = t.email_text;
+      
+      document.getElementById('footer-text').textContent = t.footer_text;
+      document.getElementById('footer-text-services').textContent = t.footer_text;
+      document.getElementById('footer-text-about').textContent = t.footer_text;
+      document.getElementById('footer-text-contact').textContent = t.footer_text;
+      
+      updateLangButtons();
+    }
+
+    function updateLangButtons() {
+      const langBtns = [
+        { id: 'lang-id', mobile: 'mobile-lang-id', lang: 'id' },
+        { id: 'lang-en', mobile: 'mobile-lang-en', lang: 'en' }
+      ];
+      
+      langBtns.forEach(btn => {
+        const isActive = btn.lang === currentLang;
+        const activeClass = isActive ? 'font-bold' : 'opacity-60';
+        document.getElementById(btn.id).className = `px-3 py-1 rounded font-medium transition-all ${activeClass}`;
+        document.getElementById(btn.mobile).className = `px-3 py-1 rounded font-medium ${activeClass}`;
+      });
+    }
+
+    document.getElementById('logo').addEventListener('click', () => showPage('main'));
+    
+    document.getElementById('nav-services').addEventListener('click', () => showPage('services'));
+    document.getElementById('nav-about').addEventListener('click', () => showPage('about'));
+    document.getElementById('nav-contact').addEventListener('click', () => showPage('contact'));
+    
+    document.getElementById('mobile-nav-services').addEventListener('click', () => {
+      showPage('services');
+      document.getElementById('mobile-menu').classList.add('hidden');
+    });
+    document.getElementById('mobile-nav-about').addEventListener('click', () => {
+      showPage('about');
+      document.getElementById('mobile-menu').classList.add('hidden');
+    });
+    document.getElementById('mobile-nav-contact').addEventListener('click', () => {
+      showPage('contact');
+      document.getElementById('mobile-menu').classList.add('hidden');
+    });
+    
+    document.getElementById('lang-id').addEventListener('click', () => switchLanguage('id'));
+    document.getElementById('lang-en').addEventListener('click', () => switchLanguage('en'));
+    document.getElementById('mobile-lang-id').addEventListener('click', () => switchLanguage('id'));
+    document.getElementById('mobile-lang-en').addEventListener('click', () => switchLanguage('en'));
+
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('nav');
+      if (window.scrollY > 50) {
+        nav.style.backdropFilter = 'blur(10px)';
+        nav.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+      } else {
+        nav.style.backdropFilter = 'none';
+        nav.style.boxShadow = 'none';
+      }
+    });
+
+    async function onConfigChange(config) {
+      const customFont = config.font_family || defaultConfig.font_family;
+      const baseFont = `${customFont}, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif`;
+      const baseSize = config.font_size || defaultConfig.font_size;
+      
+      document.body.style.fontFamily = baseFont;
+      document.body.style.backgroundColor = config.background_color || defaultConfig.background_color;
+      document.body.style.color = config.text_color || defaultConfig.text_color;
+      
+      const nav = document.getElementById('nav');
+      nav.style.backgroundColor = `${config.background_color || defaultConfig.background_color}cc`;
+      nav.style.borderBottom = `1px solid ${config.surface_color || defaultConfig.surface_color}`;
+      
+      const logo = document.getElementById('logo');
+      logo.style.color = config.primary_action_color || defaultConfig.primary_action_color;
+      logo.style.fontSize = `${baseSize * 1.5}px`;
+      
+      const logoImg = document.getElementById('logo-img');
+      if (logoImg && logoImg.style.display !== 'none') {
+        logoImg.style.filter = `drop-shadow(0 0 3px ${config.primary_action_color || defaultConfig.primary_action_color})`;
+      }
+      
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.style.color = config.text_color || defaultConfig.text_color;
+        link.style.fontSize = `${baseSize}px`;
+      });
+      
+      const navLinkAfter = document.createElement('style');
+      navLinkAfter.textContent = `.nav-link::after { background-color: ${config.primary_action_color || defaultConfig.primary_action_color}; }`;
+      document.head.appendChild(navLinkAfter);
+      
+      const langButtons = ['lang-id', 'lang-en', 'mobile-lang-id', 'mobile-lang-en'];
+      langButtons.forEach(id => {
+        const btn = document.getElementById(id);
+        btn.style.color = config.text_color || defaultConfig.text_color;
+        btn.style.fontSize = `${baseSize * 0.875}px`;
+      });
+      
+      const hero = document.getElementById('hero');
+      hero.style.background = `linear-gradient(135deg, ${config.background_color || defaultConfig.background_color} 0%, ${config.surface_color || defaultConfig.surface_color} 100%)`;
+      
+      const heroTitle = document.getElementById('hero-title');
+      heroTitle.style.fontSize = `${baseSize * 3}px`;
+      heroTitle.style.color = config.text_color || defaultConfig.text_color;
+      
+      heroTitle.style.fontFamily = "'Montserrat', " + baseFont;
+      heroTitle.style.fontWeight = '800';
+      
+      document.getElementById('hero-line1').style.color = config.text_color || defaultConfig.text_color;
+      document.getElementById('hero-line2').style.color = config.text_color || defaultConfig.text_color;
+      document.getElementById('hero-exclamation').style.color = config.text_color || defaultConfig.text_color;
+      
+      const heroSubtitle = document.getElementById('hero-subtitle');
+      heroSubtitle.style.fontSize = `${baseSize * 1.25}px`;
+      heroSubtitle.style.color = config.text_color || defaultConfig.text_color;
+      heroSubtitle.style.opacity = '0.9';
+      
+      const ctaButton = document.getElementById('cta-button');
+      ctaButton.style.backgroundColor = config.primary_action_color || defaultConfig.primary_action_color;
+      ctaButton.style.color = '#ffffff';
+      ctaButton.style.fontSize = `${baseSize * 1.125}px`;
+      
+      const servicesPageTitle = document.getElementById('services-page-title');
+      servicesPageTitle.style.fontSize = `${baseSize * 2.5}px`;
+      servicesPageTitle.style.color = config.text_color || defaultConfig.text_color;
+      servicesPageTitle.style.fontFamily = "'Montserrat', " + baseFont;
+      servicesPageTitle.style.fontWeight = '800';
+      
+      document.getElementById('services-page-desc').style.fontSize = `${baseSize * 1.25}px`;
+      document.getElementById('services-page-desc').style.color = config.text_color || defaultConfig.text_color;
+      document.getElementById('services-page-desc').style.opacity = '0.9';
+      
+      ['service-icon-1', 'service-icon-2', 'service-icon-3', 'service-icon-4', 'service-icon-5', 'service-icon-6'].forEach(id => {
+        const icon = document.getElementById(id);
+        icon.style.backgroundColor = `${config.primary_action_color || defaultConfig.primary_action_color}20`;
+        const svg = icon.querySelector('svg');
+        if (svg) {
+          svg.style.color = config.primary_action_color || defaultConfig.primary_action_color;
+        }
+      });
+      
+      ['service-1-title', 'service-2-title', 'service-3-title', 'service-4-title', 'service-5-title', 'service-6-title'].forEach(id => {
+        const elem = document.getElementById(id);
+        elem.style.fontSize = `${baseSize * 1.5}px`;
+        elem.style.color = config.text_color || defaultConfig.text_color;
+        elem.style.fontFamily = "'Montserrat', " + baseFont;
+        elem.style.fontWeight = '700';
+      });
+      
+      ['service-1-desc', 'service-2-desc', 'service-3-desc', 'service-4-desc', 'service-5-desc', 'service-6-desc'].forEach(id => {
+        document.getElementById(id).style.fontSize = `${baseSize}px`;
+        document.getElementById(id).style.color = config.text_color || defaultConfig.text_color;
+        document.getElementById(id).style.opacity = '0.85';
+      });
+      
+      const whyChooseTitle = document.getElementById('why-choose-title');
+      whyChooseTitle.style.fontSize = `${baseSize * 2.5}px`;
+      whyChooseTitle.style.color = config.text_color || defaultConfig.text_color;
+      whyChooseTitle.style.fontFamily = "'Montserrat', " + baseFont;
+      whyChooseTitle.style.fontWeight = '800';
+      
+      ['why-choose-p1', 'why-choose-p2', 'why-choose-p3', 'why-choose-p4'].forEach(id => {
+        const p = document.getElementById(id);
+        p.style.fontSize = `${baseSize * 1.125}px`;
+        p.style.color = config.text_color || defaultConfig.text_color;
+        p.style.opacity = '0.9';
+      });
+      
+      const processTitle = document.getElementById('process-title');
+      processTitle.style.fontSize = `${baseSize * 2.5}px`;
+      processTitle.style.color = config.text_color || defaultConfig.text_color;
+      processTitle.style.fontFamily = "'Montserrat', " + baseFont;
+      processTitle.style.fontWeight = '800';
+      
+      ['step1-circle', 'step2-circle', 'step3-circle'].forEach(id => {
+        const circle = document.getElementById(id);
+        circle.style.backgroundColor = `${config.primary_action_color || defaultConfig.primary_action_color}20`;
+        circle.style.color = config.primary_action_color || defaultConfig.primary_action_color;
+        circle.style.border = `3px solid ${config.primary_action_color || defaultConfig.primary_action_color}`;
+        const svg = circle.querySelector('svg');
+        if (svg) {
+          svg.style.stroke = config.primary_action_color || defaultConfig.primary_action_color;
+        }
+      });
+      
+      ['step1-title', 'step2-title', 'step3-title'].forEach(id => {
+        const elem = document.getElementById(id);
+        elem.style.fontSize = `${baseSize * 1.5}px`;
+        elem.style.color = config.text_color || defaultConfig.text_color;
+        elem.style.fontFamily = "'Montserrat', " + baseFont;
+        elem.style.fontWeight = '700';
+      });
+      
+      ['step1-desc', 'step2-desc', 'step3-desc'].forEach(id => {
+        document.getElementById(id).style.fontSize = `${baseSize}px`;
+        document.getElementById(id).style.color = config.text_color || defaultConfig.text_color;
+        document.getElementById(id).style.opacity = '0.85';
+      });
+      
+      const valueCards = document.querySelectorAll('.value-card');
+      valueCards.forEach(card => {
+        card.style.backgroundColor = config.surface_color || defaultConfig.surface_color;
+        card.style.border = `1px solid ${config.background_color || defaultConfig.background_color}`;
+      });
+      
+      const valueHoverStyle = document.createElement('style');
+      valueHoverStyle.textContent = `.value-card:hover { box-shadow: 0 20px 25px -5px ${config.primary_action_color || defaultConfig.primary_action_color}20, 0 10px 10px -5px ${config.primary_action_color || defaultConfig.primary_action_color}10; }`;
+      document.head.appendChild(valueHoverStyle);
+      
+      const finalCtaTitle = document.getElementById('final-cta-title');
+      finalCtaTitle.style.fontSize = `${baseSize * 2.5}px`;
+      finalCtaTitle.style.color = config.text_color || defaultConfig.text_color;
+      finalCtaTitle.style.fontFamily = "'Montserrat', " + baseFont;
+      finalCtaTitle.style.fontWeight = '800';
+      
+      document.getElementById('final-cta-subtitle').style.fontSize = `${baseSize * 1.25}px`;
+      document.getElementById('final-cta-subtitle').style.color = config.text_color || defaultConfig.text_color;
+      document.getElementById('final-cta-subtitle').style.opacity = '0.9';
+      
+      const finalCtaButton = document.getElementById('final-cta-button');
+      finalCtaButton.style.backgroundColor = config.primary_action_color || defaultConfig.primary_action_color;
+      finalCtaButton.style.color = '#ffffff';
+      finalCtaButton.style.fontSize = `${baseSize * 1.125}px`;
+      
+      // About Page Hero
+      const aboutHeroTitle = document.getElementById('about-hero-title');
+      if (aboutHeroTitle) {
+        aboutHeroTitle.style.fontSize = `${baseSize * 3.5}px`;
+        aboutHeroTitle.style.color = config.text_color || defaultConfig.text_color;
+        aboutHeroTitle.style.fontFamily = "'Montserrat', " + baseFont;
+        aboutHeroTitle.style.fontWeight = '800';
+      }
+      
+      const aboutHeroSubtitle = document.getElementById('about-hero-subtitle');
+      if (aboutHeroSubtitle) {
+        aboutHeroSubtitle.style.fontSize = `${baseSize * 1.5}px`;
+        aboutHeroSubtitle.style.color = config.text_color || defaultConfig.text_color;
+      }
+      
+      // Timeline Line and Dots
+      const timelineLine = document.getElementById('timeline-line');
+      if (timelineLine) {
+        timelineLine.style.backgroundColor = config.primary_action_color || defaultConfig.primary_action_color;
+      }
+      
+      ['timeline-dot-1', 'timeline-dot-2', 'timeline-dot-3', 'timeline-dot-4'].forEach(id => {
+        const dot = document.getElementById(id);
+        if (dot) {
+          dot.style.backgroundColor = config.background_color || defaultConfig.background_color;
+          dot.style.borderColor = config.primary_action_color || defaultConfig.primary_action_color;
+          const svg = dot.querySelector('svg');
+          if (svg) {
+            svg.style.stroke = config.primary_action_color || defaultConfig.primary_action_color;
+          }
+        }
+      });
+      
+      ['timeline-1-date', 'timeline-2-date', 'timeline-3-date', 'timeline-4-date'].forEach(id => {
+        const date = document.getElementById(id);
+        if (date) {
+          date.style.fontSize = `${baseSize * 1.875}px`;
+          date.style.color = config.primary_action_color || defaultConfig.primary_action_color;
+          date.style.fontFamily = "'Montserrat', " + baseFont;
+          date.style.fontWeight = '700';
+        }
+      });
+      
+      ['timeline-1-text', 'timeline-2-text', 'timeline-3-text', 'timeline-4-text'].forEach(id => {
+        const text = document.getElementById(id);
+        if (text) {
+          text.style.fontSize = `${baseSize * 1.125}px`;
+          text.style.color = config.text_color || defaultConfig.text_color;
+        }
+      });
+      
+      // Core Values
+      const valuesTitle = document.getElementById('values-title');
+      if (valuesTitle) {
+        valuesTitle.style.fontSize = `${baseSize * 2.5}px`;
+        valuesTitle.style.color = config.text_color || defaultConfig.text_color;
+        valuesTitle.style.fontFamily = "'Montserrat', " + baseFont;
+        valuesTitle.style.fontWeight = '800';
+      }
+      
+      ['value-icon-1', 'value-icon-2', 'value-icon-3'].forEach(id => {
+        const icon = document.getElementById(id);
+        if (icon) {
+          icon.style.backgroundColor = `${config.primary_action_color || defaultConfig.primary_action_color}20`;
+          const svg = icon.querySelector('svg');
+          if (svg) {
+            svg.style.color = config.primary_action_color || defaultConfig.primary_action_color;
+          }
+        }
+      });
+      
+      ['value-1-title', 'value-2-title', 'value-3-title'].forEach(id => {
+        const title = document.getElementById(id);
+        if (title) {
+          title.style.fontSize = `${baseSize * 1.5}px`;
+          title.style.color = config.text_color || defaultConfig.text_color;
+          title.style.fontFamily = "'Montserrat', " + baseFont;
+          title.style.fontWeight = '700';
+        }
+      });
+      
+      ['value-1-desc', 'value-2-desc', 'value-3-desc'].forEach(id => {
+        const desc = document.getElementById(id);
+        if (desc) {
+          desc.style.fontSize = `${baseSize}px`;
+          desc.style.color = config.text_color || defaultConfig.text_color;
+        }
+      });
+      
+      // Why Choose Us
+      const whyUsTitle = document.getElementById('why-us-title');
+      if (whyUsTitle) {
+        whyUsTitle.style.fontSize = `${baseSize * 2.5}px`;
+        whyUsTitle.style.color = config.text_color || defaultConfig.text_color;
+        whyUsTitle.style.fontFamily = "'Montserrat', " + baseFont;
+        whyUsTitle.style.fontWeight = '800';
+      }
+      
+      ['check-icon-1', 'check-icon-2', 'check-icon-3', 'check-icon-4', 'check-icon-5', 'check-icon-6'].forEach(id => {
+        const icon = document.getElementById(id);
+        if (icon) {
+          icon.style.backgroundColor = `${config.primary_action_color || defaultConfig.primary_action_color}20`;
+          const svg = icon.querySelector('svg');
+          if (svg) {
+            svg.style.stroke = config.primary_action_color || defaultConfig.primary_action_color;
+          }
+        }
+      });
+      
+      ['reason-1', 'reason-2', 'reason-3', 'reason-4', 'reason-5', 'reason-6'].forEach(id => {
+        const reason = document.getElementById(id);
+        if (reason) {
+          reason.style.fontSize = `${baseSize * 1.125}px`;
+          reason.style.color = config.text_color || defaultConfig.text_color;
+        }
+      });
+      
+      // About CTA
+      const aboutCtaTitle = document.getElementById('about-cta-title');
+      if (aboutCtaTitle) {
+        aboutCtaTitle.style.fontSize = `${baseSize * 2.5}px`;
+        aboutCtaTitle.style.color = config.text_color || defaultConfig.text_color;
+        aboutCtaTitle.style.fontFamily = "'Montserrat', " + baseFont;
+        aboutCtaTitle.style.fontWeight = '800';
+      }
+      
+      const aboutCtaButton = document.getElementById('about-cta-button');
+      if (aboutCtaButton) {
+        aboutCtaButton.style.backgroundColor = config.primary_action_color || defaultConfig.primary_action_color;
+        aboutCtaButton.style.color = '#ffffff';
+        aboutCtaButton.style.fontSize = `${baseSize * 1.125}px`;
+      }
+      
+      const contactTitle = document.getElementById('contact-title');
+      contactTitle.style.fontSize = `${baseSize * 2.5}px`;
+      contactTitle.style.color = config.text_color || defaultConfig.text_color;
+      contactTitle.style.fontFamily = "'Montserrat', " + baseFont;
+      contactTitle.style.fontWeight = '800';
+      
+      document.getElementById('contact-subtitle').style.fontSize = `${baseSize * 1.25}px`;
+      document.getElementById('contact-subtitle').style.color = config.text_color || defaultConfig.text_color;
+      document.getElementById('contact-subtitle').style.opacity = '0.9';
+      
+      const contactHeaderIcon = document.getElementById('contact-header-icon');
+      if (contactHeaderIcon) {
+        contactHeaderIcon.style.backgroundColor = `${config.primary_action_color || defaultConfig.primary_action_color}20`;
+        const headerSvg = contactHeaderIcon.querySelector('svg');
+        if (headerSvg) {
+          headerSvg.style.stroke = config.primary_action_color || defaultConfig.primary_action_color;
+        }
+      }
+      
+      const whatsappBtn = document.getElementById('whatsapp-btn');
+      whatsappBtn.style.backgroundColor = config.surface_color || defaultConfig.surface_color;
+      whatsappBtn.style.color = config.text_color || defaultConfig.text_color;
+      whatsappBtn.style.border = `2px solid ${config.primary_action_color || defaultConfig.primary_action_color}`;
+      
+      const whatsappIconContainer = document.getElementById('whatsapp-icon-container');
+      if (whatsappIconContainer) {
+        whatsappIconContainer.style.backgroundColor = `${config.primary_action_color || defaultConfig.primary_action_color}20`;
+        const whatsappSvg = whatsappIconContainer.querySelector('svg');
+        if (whatsappSvg) {
+          whatsappSvg.style.color = config.primary_action_color || defaultConfig.primary_action_color;
+        }
+      }
+      
+      const emailBtn = document.getElementById('email-btn');
+      emailBtn.style.backgroundColor = config.surface_color || defaultConfig.surface_color;
+      emailBtn.style.color = config.text_color || defaultConfig.text_color;
+      emailBtn.style.border = `2px solid ${config.secondary_action_color || defaultConfig.secondary_action_color}`;
+      
+      const emailIconContainer = document.getElementById('email-icon-container');
+      if (emailIconContainer) {
+        emailIconContainer.style.backgroundColor = `${config.secondary_action_color || defaultConfig.secondary_action_color}20`;
+        const emailSvg = emailIconContainer.querySelector('svg');
+        if (emailSvg) {
+          emailSvg.style.stroke = config.secondary_action_color || defaultConfig.secondary_action_color;
+        }
+      }
+      
+      const footers = ['footer', 'footer-services', 'footer-about', 'footer-contact'];
+      footers.forEach(footerId => {
+        const footer = document.getElementById(footerId);
+        footer.style.backgroundColor = config.surface_color || defaultConfig.surface_color;
+        footer.style.borderTop = `1px solid ${config.background_color || defaultConfig.background_color}`;
+      });
+      
+      const footerTexts = ['footer-text', 'footer-text-services', 'footer-text-about', 'footer-text-contact'];
+      footerTexts.forEach(textId => {
+        const footerText = document.getElementById(textId);
+        footerText.textContent = config.footer_text || defaultConfig.footer_text;
+        footerText.style.color = config.text_color || defaultConfig.text_color;
+        footerText.style.opacity = '0.7';
+        footerText.style.fontSize = `${baseSize * 0.875}px`;
+      });
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              config.background_color = value;
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ background_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.surface_color || defaultConfig.surface_color,
+            set: (value) => {
+              config.surface_color = value;
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ surface_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ text_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.primary_action_color || defaultConfig.primary_action_color,
+            set: (value) => {
+              config.primary_action_color = value;
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ primary_action_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+            set: (value) => {
+              config.secondary_action_color = value;
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ secondary_action_color: value });
+              }
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (value) => {
+            config.font_family = value;
+            if (window.elementSdk) {
+              window.elementSdk.setConfig({ font_family: value });
+            }
+          }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (value) => {
+            config.font_size = value;
+            if (window.elementSdk) {
+              window.elementSdk.setConfig({ font_size: value });
+            }
+          }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ['hero_title', config.hero_title || defaultConfig.hero_title],
+        ['hero_subtitle', config.hero_subtitle || defaultConfig.hero_subtitle],
+        ['cta_button', config.cta_button || defaultConfig.cta_button],
+        ['about_title', config.about_title || defaultConfig.about_title],
+        ['footer_text', config.footer_text || defaultConfig.footer_text]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+
+    updateLangButtons();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a20efb8b0452df8',t:'MTc2MzczNTk2NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
